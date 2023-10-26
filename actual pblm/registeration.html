@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+            let inp1=document.getElementById("name")
+            let head1=document.getElementById("dName")
+            let inp2=document.getElementById("gender")
+            let head2=document.getElementById("dGender")
+            let inp3=document.getElementById("email")
+            let head3=document.getElementById("dEmail")
+            let inp4=document.getElementById("mobile")
+            let head4=document.getElementById("dMobile")
+
+		function showName() {
+           
+			head1.textContent=inp1.value
+		}
+
+		function showGender() {
+			
+            head2.textContent=inp2.value
+		}
+
+		function showEmail() {
+			
+            head3.textContent=inp3.value
+		}
+
+		function showMobile() {
+			
+            head4.textContent=inp4.value
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+            inp1.value=" "
+            inp2.value=" "
+            inp3.value=" "
+            inp4.value=" "
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+            head1.textContent=" "
+            head2.textContent=" "
+            head3.textContent=" "
+            head4.textContent=" "
+		}
+	</script>
+</body>
+</html>
