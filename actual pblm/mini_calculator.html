@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cont{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border: 1px solid greenyellow;
+        width: 60%;
+        margin: auto;
+        
+    }
+
+    .inputt{
+        
+        
+        width: 100%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-around ;
+        
+        
+        
+    }
+    .operator{
+        
+        width: 80%;
+        margin: auto;
+     
+        display: flex;
+        justify-content: space-around ;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .operator>div>button{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: none;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    font-size: large;
+    
+    padding-right:20%;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 8%;
+   
+    
+    }
+    
+    .inputt>div{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 1px solid greenyellow;
+    border-radius: 8px;
+    }
+    
+    
+
+</style>
+<body>
+    <div class="cont">
+        <div class="inputt">
+          <div>  <input id="num1" type="number" placeholder="enter 1st number"/></div>
+          <div> <input id="num2" type="number" placeholder="enter 2nd number"/></div>
+        </div>
+        
+        <div class="operator">
+            <div><button onclick="add() "><span style="  padding-left:20%; padding-right: 15px;">Add</span></button></div>
+            <div><button onclick="subtract()">Subtract</button></div>
+            <div><button onclick="multiply()">Multiply</button></div>
+            <div><button onclick="divide()">Divide</button></div>
+        </div>
+            
+        
+    </div>
+    
+
+</body>
+</html>
+<script>
+    let inp1=document.getElementById("num1")
+    let inp2=document.getElementById("num2")
+    function add(){
+        let sum= +inp1.value + +inp2.value
+        alert("The sum  of two number is " + sum )
+        
+    }
+    function subtract(){
+        let subtract= +inp1.value - +inp2.value
+        alert("The subtraction of two number is " + subtract )
+    }
+    function multiply(){
+        let multiply= +inp1.value * +inp2.value
+        alert("The multiplication  of two number is " + multiply )
+    }
+    function divide(){
+        let divide= +inp1.value / +inp2.value
+        alert("The division  of two number is " + divide )
+    }
+
+</script>
