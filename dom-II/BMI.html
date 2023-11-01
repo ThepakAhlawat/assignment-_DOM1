@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Check your BMI</h1>
+    <h3 class="subhead">Enter your weight and height below to check your BMI results</h3>
+    <h3 class="subhead">Put your weight in here(KG)</h3>
+    <input id="inp1" type="number" placeholder="weight in kg"/>
+    <h3 class="subhead">And your height in here(CM)</h3>
+    <input id="inp2" type="number" placeholder="height in Cm"/><br>
+    <button onclick="calculate()">Calculate BMI</button>
+
+    <h3 id="result"></h3>
+</body>
+</html>
+<script>
+let inp1=document.getElementById("inp1")
+let inp2=document.getElementById("inp2")
+let result=document.querySelector("#result")
+
+function calculate(){
+    let bmi=0
+    let bag=""
+   bmi=inp1.value/((inp2.value/100)*(inp2.value/100))
+   let bmi1=bmi.toFixed(1)
+   if(Number(bmi1)<=18.5){
+    bag+="Your BMI is "+Number(bmi1) +" which means you are underWeight"
+     result.innerText=bag;
+     inp1.value=""
+     inp2.value=""
+   }
+   if(Number(bmi1)>=18.5 && Number(bmi1)<=24.9){
+    bag+="Your BMI is "+Number(bmi1) +" which means you are normalWeight"
+     result.innerText=bag;
+     inp1.value=""
+     inp2.value=""
+   }
+   if(Number(bmi1)>=24.9 && Number(bmi1)<=29.9){
+    bag+="Your BMI is "+Number(bmi1) +" which means you are overWeight"
+     result.innerText=bag;
+     inp1.value=""
+     inp2.value=""
+   }
+   if(Number(bmi1)>=30){
+    bag+="Your BMI is "+Number(bmi1) +" which means you are obese"
+     result.innerText=bag;
+     inp1.value=""
+     inp2.value=""
+   }
+
+
+
+
+}
+</script>
+
+
