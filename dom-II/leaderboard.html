@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderboard</title>
+    <style>
+        .main{
+           
+            width: 70%;
+            height: 350px;
+            margin: auto;
+        }
+        .minmax{
+           
+            display:flex;
+            justify-content: space-between;
+            margin-bottom: 1%;
+        }
+        #min{
+           
+           margin-left: 7%;
+           background-color: red;
+           font-size: 30px;
+            font-weight: 500;
+            width: 20%;
+            text-align: center;
+            padding: 4%;
+        }
+        #max{
+          
+           margin-right: 8%;
+           background-color: green;
+           font-size: 30px;
+            font-weight: 500;
+            width: 20%;
+            text-align: center;
+            padding:4%
+        }
+        .heading{
+           
+            display:flex;
+            justify-content: space-between;
+        }
+        #mini{
+           
+           margin-left: 15%;
+           font-size: 25px;
+            font-weight: 500;
+           
+        }
+        #maxi{
+           
+           margin-right: 15%;
+           font-size: 25px;
+            font-weight: 500;
+          
+        }
+        .score{
+            border:2px solid red;
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .btns{
+            
+            width:80%;
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows:  35px 35px 35px  ;
+            gap: 15px 15px;
+            margin-top: 1%;
+            text-align: center;
+            padding: 1%;
+            
+        }
+        .btns>button{
+            background-color: orangered;
+            font-size: 20px;
+            font-weight: 400;
+            
+        }
+        .btns>button:nth-child(1){
+        background-color:green ;
+        color: white;
+    }
+    .btns>button:nth-child(3){
+        background-color:green ;
+        color: white;
+    }
+    .btns>button:nth-child(7){
+        background-color:green ;
+        color: white;
+    }
+    .btns>button:nth-child(9){
+        background-color:green ;
+        color: white;
+    }
+    #enter{
+        width:40%;
+        margin:auto;
+        margin-top: 2%;
+    }
+    #enter>button{
+        background-color: black;
+        color: white;
+        width: 100%;
+        padding:3%
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="minmax"> 
+            <div id="min">25</div>
+
+            <div id="max">100</div>
+        </div>
+        <div class="heading">
+            <div id="mini">MIN</div>
+            <div id="maxi">MAX</div>
+        </div>
+
+        <h2 style="text-align: center;">SCORE</h2>
+        <div class="score">#</div>
+        <div class="btns">
+            <button>1</button>
+            
+            <button>2</button>
+            <button>3</button>
+            
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <div ></div>
+            <button>0</button>
+        </div>
+        <div id="enter"><button onclick="calculate()">ENTER</button></div>
+    </div>
+</body>
+</html>
+
+<script>
+    let bag1=""
+    let score=document.querySelector(".score")
+    let min=document.getElementById("min")
+    let max=document.getElementById("max")
+
+    let buttons=document.querySelectorAll(".btns>button")
+    buttons.forEach(element => {
+        element.addEventListener("click" ,function(){
+            bag1+=element.textContent
+
+        score.innerText=bag1
+        console.log(score.innerText,bag1)
+        })
+    })
+    function calculate(){
+        score.innerText=0
+    if(Number(bag1)<Number(min.textContent)){
+        min.textContent=bag1
+        bag1=""
+    }
+     else if(Number(bag1)>Number(max.textContent)){
+        max.textContent=bag1
+        bag1=""
+    }
+        else if(Number(bag1)==Number(min.textContent)|| Number(bag1)==Number(max.textContent)  ){
+            alert(
+                "oops!! you loose the game"
+                
+            )
+            bag1=""
+            
+        }
+        else if(Number(bag1)>Number(min.textContent)&& Number(bag1)<Number(max.textContent)  ){
+            alert(
+                "oops!! you loose the game"
+                
+            )
+            bag1=""
+            
+        }
+        
+    }
+</script>
