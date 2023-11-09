@@ -1,0 +1,458 @@
+*{
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Segoe UI;
+}
+nav{
+    background-color: rgb(2, 2, 81);
+    height: 75px;;
+    width: 100%;
+   
+}
+#orbit{
+height: 30px;
+margin-top: 20px;
+margin-bottom: 18px;
+margin-left: 8%;
+}
+nav ul{
+    float: right;
+    margin-right: 8%;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 15px;
+}
+nav ul li a{
+    color: white;
+    font-size: 16px;
+    font-weight:500;
+
+}
+a.act:hover{
+    color:rgb(8, 197, 197);
+    transition: 0.3s; 
+}
+a.activa:hover{
+    color:rgb(8, 197, 197);
+    transition: 0.3s; 
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+   margin-right: 8%;
+    cursor: pointer;
+    display: none;
+    
+}
+#check{
+    display: none;
+}
+
+
+.footer{
+    width:90%;
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+.f-container{
+    margin-right: 5px;
+    width: 175px;
+}
+.f-container>h4{
+    margin-left: 15px;
+}
+.f-container ul li{
+   margin-top: 15px;
+    font-size: 15px;
+    
+}
+.f-container>ul>li>a{
+color: teal;
+}
+.f-container>ul>li>a:hover{
+    text-decoration-line: underline;
+    
+    }
+.expedia_group{
+    margin-left: 105px;
+    margin-top: 50px;
+}
+.imagecontainer{
+    width:85%;
+    margin:auto;
+    margin-top: 20px;
+}
+.slider{
+    display:flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    
+    margin-top: 20px;
+    
+}
+.slider>a{
+    margin: 10px;
+    border:1px black solid;
+    padding: 3px;
+
+}
+.container{
+    width: 78%;
+    margin-left: 107px;
+    border:1px black solid;
+    height: 180px;
+    margin-top: 30px;
+}
+#option{
+   
+    border-bottom:1px black solid;
+    width:100%;
+    margin: auto;
+   
+}
+#option> ul{
+text-align: center;
+padding-top: 5px;
+padding-bottom: 10px;
+
+
+   
+}
+  ul li{
+    display: inline-block;
+    line-height: 20px;
+    margin:15px;
+}
+ a.acti:hover{
+    color:rgb(8, 197, 197);
+    text-decoration: underline;
+}
+.heading{
+    margin-left: 6px;
+}
+.info{
+    /* box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
+    /* border:2px green solid; */
+    margin-top: 10px;
+}
+.info .form{
+   
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    padding: 1% 1%;
+}
+.info input,.info .date,.info .book{
+    padding:15px;
+    margin-right: 18px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: none;
+}
+.info input{
+    width:45%;
+   
+}
+.info .date{
+    width:38%;
+    
+}
+.info .book{
+    width:10%;
+    flex:1;
+    text-transform: none;
+    padding: 15px;;
+    padding-left: 27px;
+    background-color:red ;
+    color:white;
+    font-weight: 500;
+    flex:1;
+}
+.credentials{
+    width: 70%;
+    margin: auto;
+    height: 500px;
+    margin-top: 70px;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#signup-name{
+    padding:15px;
+    margin-right: 18px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: 1px rgb(124, 186, 249) solid;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+#signup-email{
+    padding:15px;
+    margin-right: 18px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: 1px rgb(124, 186, 249) solid;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}#signup-password{
+    padding:15px;
+    margin-right: 18px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: 1px rgb(124, 186, 249) solid;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+
+
+
+@media( max-width: 952px){
+    nav{
+        background-color: rgb(2, 2, 81);
+        height: 65px;;
+        width: 100%;
+       
+    }
+    #orbit{
+        height: 27px;
+        margin-top: 18px;
+        margin-bottom: 13px;
+        margin-left: 6%;
+        }
+
+        nav ul li a{
+            color: white;
+            font-size: 14px;
+            font-weight:500;
+        
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 60px;
+            margin:0 15px;
+        }
+        .checkbtn{
+            font-size: 30px;
+            color:white;
+            float: right;
+            line-height: 80px;
+           margin-right: 8%;
+            cursor: pointer;
+            display: block;
+            
+        }
+        nav ul{
+            display: none;
+        }
+        .checkbtn i:hover{
+            color:rgb(8, 197, 197);
+    transition: 0.3s; 
+        }
+        .footer{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        .f-container{
+            margin-right: 10px;
+            width: 180px;
+        }
+        .f-container>h4{
+            margin-left: 6px;
+        }
+        .f-container ul li{
+           margin-top: 12px;
+            font-size: 12px;
+            
+        }
+        .f-container>ul>li>a{
+        color: teal;
+        }
+        .f-container>ul>li>a:hover{
+            text-decoration-line: underline;
+            
+            }
+        .expedia_group{
+            margin-left: 18px;
+            margin-top: 50px;
+        }
+        .imagecontainer{
+            width:80%;
+         margin-top: 20px;
+        }
+
+        .slider{
+            width: 100%;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 15px;
+            
+            
+        }
+        .slider a{
+            
+            margin-top: 10px;
+            margin-right: 50px;
+            border:1px black solid;
+            padding:2px;
+            border-radius: 10px;
+          
+        
+        }
+        .slider a .image img{
+            height: 125px;
+            border-radius: 10px;
+        }
+        .container{
+            width: 80%;
+            margin-left:73px;
+            border:2px black solid;
+            height: 170px;
+            margin-top: 30px;
+        }
+        #option{
+           
+            border:1px black solid;
+            width:100%;
+            margin: auto;
+           
+        }
+        ul li{
+            display: inline-block;
+            line-height: 13px;
+            margin:8px;
+        }
+        .info input{
+            width:50%;
+           flex:2
+        }
+        .info .date{
+            width:30%;
+            flex:1;
+        }
+        .info .book{
+            width:10%;
+            flex:1;
+            text-transform: none;
+            padding: 15px;;
+            padding-left: 27px;
+            background-color:red ;
+            color:white;
+            font-weight: 500;
+            
+        }
+        .footer{
+            width:80%;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+    
+           
+            margin: auto;
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+        .f-container{
+            margin-right: 5px;
+            width: 145px;
+            margin-top: 10px;
+        }
+        .f-container ul li{
+           margin-top: 15px;
+            font-size: 12px;
+            
+        }
+        .expedia_group{
+            margin-left: 80px;
+            margin-top: 40px;
+        }
+       
+       
+}
+
+@media( max-width: 585px){
+    .imagecontainer{
+        width:60%;
+     
+     margin-left:20px;
+     padding-left: 10px;
+    }
+
+    .slider{
+        width: 80%;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 15px;
+        
+        
+        
+    }
+    .slider a{
+        
+        margin-top: 10px;
+        margin-right: 15px;
+        border:1px black solid;
+        padding:2px;
+        border-radius: 7px;
+      
+    
+    }
+    .slider a .image img{
+        height: 100px;
+        border-radius: 7px;
+    }
+    .footer{
+        width:100%;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+
+       
+        margin: auto;
+        margin-top: 15px;
+        padding-left: 55px;
+    }
+    .f-container{
+        
+        width: 160px;
+        margin-top: 10px;
+    }
+    .f-container ul li{
+       margin-top: 15px;
+        font-size: 12px;
+        
+    }
+    .expedia_group{
+        margin-left: 56px;
+        margin-top: 40px;
+    }
+    .container{
+        width: 90%;
+        margin-left:10px;
+        border:2px black solid;
+        height: 170px;
+        margin-top: 30px;
+    }
+}
+
