@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student record</title>
+</head>
+<body>
+    <div id="cont">
+       
+    </div>
+</body>
+<script>
+    
+    function Student(name, roll_no, grade, section,marks) {
+  this.name = name;
+  this.roll_no = roll_no;
+  this.grade = grade;
+  this.section = section;
+  this.marks=marks;
+  let sum=function(){
+    let summ=0;
+    summ+= this.marks.science+ this.marks.maths+ this.marks.social_science+ this.marks.english+ this.marks.hindi
+    return summ
+  }
+  this.ReportCard = function() {
+    console.log("Report Card for - " + this.name );
+    console.log("Roll no - "+this.roll_no)
+    console.log("class - "+this.grade);
+    console.log("section - "+this.section)
+    console.log("Marks Obtained in science -" + this.marks.science);
+    console.log("Marks Obtained in maths -" + this.marks.maths);
+    console.log("Marks Obtained in social_science -" + this.marks.social_science);
+    console.log("Marks Obtained in english -" + this.marks.english);
+    console.log("Marks Obtained in hindi -" + this.marks.hindi);
+    let percentage=(sum()/500)*100
+    console.log("Percentage -"+percentage)
+  }
+  }
+
+
+
+let student1 = new Student("deepak", 25, 9, "A",{science: 90, maths: 85, social_science:79 ,english: 80 ,hindi:67});
+console.log(student1);
+// document.getElementById("cont").innerHTML =student1.ReportCard()
+
+
+</script>
+</html>
