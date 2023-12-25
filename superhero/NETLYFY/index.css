@@ -1,0 +1,335 @@
+.nightmare{
+    background-color: rgb(218, 229, 240);
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:darkseagreen;
+    font-weight: 600;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    height:auto;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.image { 
+padding: 3%;
+height: 11%;
+width:27%;
+margin:auto;
+border-radius: 15px;
+margin-top: 3%;
+box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+} 
+
+.image > img{
+height:auto;
+width: 100%;
+border-radius: 15px;
+}
+
+
+
+
+.about{
+height:auto;
+width:76%;
+padding-right: 2%;
+margin: auto;
+border-radius: 15px;
+padding-left: 2%;
+box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+background-color: rgb(224, 239, 249);
+
+}
+.about > h1 + p{
+text-align: left; font-size: larger;
+}
+.parent{
+height: auto ;
+width:80%;
+margin: auto;
+box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; 
+}
+.child{
+padding-bottom: 2%;
+border-bottom-left-radius: 14px;
+border-bottom-right-radius:14px ;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding-left: 2%;
+margin-bottom: 3%;
+box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; 
+}
+
+
+.child> p{ 
+    font-size: 16px;
+font-weight: 600;
+padding-left: 2%;
+}
+
+h2{
+    text-align: center; font-size:38px;
+}
+h2+p{
+    text-align: center; font-size: 43px; font-weight: 600;
+}
+hr{
+    border: 2px solid tomato; width:80%;margin-top: 5px;
+}
+#ending{ 
+    background-color: rgb(218, 229, 240);
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    font-weight: 600;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    height:auto;
+    width: 80%;
+    margin: auto;
+      
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.parent > .child > h1{ font-size: 26px;}
+
+.matches{
+    height:auto;
+    width:80%;
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-bottom: 2%;
+}
+.matches > div {
+    height:auto;
+    width:30%;
+    padding:2%;
+    
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.matches > div > img{
+    height: 310px;
+    width:320px;
+    object-fit: cover;
+}
+#goosebumps{
+    text-align: center;
+    font-size: 32px;
+}
+
+@media only screen and (min-width: 750px) and (max-width:1023px){
+    .nightmare{
+   
+    
+    font-size: 45px;
+   
+    
+    font-weight: 600;
+    
+    
+;
+    width: 74%;
+   
+      
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.image { 
+padding: 2%;
+height: 12%;
+width:25%;
+margin:auto;
+margin-top: 2%;
+
+
+} 
+h2{
+    text-align: center; font-size:30px;
+
+}
+h2+p{
+    text-align: center; font-size: 33px; font-weight: 600;
+} 
+hr{
+    border: 1px solid tomato; width:50%;margin-top: 3px;
+}
+.about{
+height:auto;
+width:70%;
+padding-right: 1%;
+margin: auto;
+padding-left: 1%;
+
+
+}
+.about > h1 + p{
+    text-align: left; font-size:17px;}
+
+.parent{
+height: auto ;
+width:70%;
+
+
+}
+.child{
+padding-bottom: 1%;
+padding-left: 1%;
+margin-bottom: 2%;
+
+}
+
+.child> p{ 
+    font-size: 14px;
+font-weight: 600;
+padding-left: 2%;
+}
+#ending{ 
+    background-color: rgb(218, 229, 240);
+    text-align: center;
+    font-size: 23px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    font-weight: 600;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    height:auto;
+    width: 70%;
+    margin: auto;
+      
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.parent > .child > h1{ font-size: 20px;}
+
+.matches{
+    height:auto;
+    width:70%;
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-bottom: 2%;
+}
+.matches > div {
+    height:auto;
+    width:25%;
+    padding:2%;
+    
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.matches > div > img{
+    height: 165px;
+    width:100%;
+}
+#goosebumps{
+    text-align: center;
+    font-size: 27px;
+}
+
+}
+@media only screen and ( min-width:350px ) and (max-width: 749px){
+.nightmare{
+   
+    
+   font-size: 33px;
+  
+   
+   font-weight: 600;
+   
+   
+;
+   width: 63%;
+  
+     
+   padding-top: 11px;
+   padding-bottom: 6px;
+}
+.image { 
+padding: 1%;
+height: 10%;
+width:22%;
+margin:auto;
+margin-top: 1%;
+
+
+} 
+h2{
+    text-align: center; font-size:22px;
+
+
+}
+h2+p{
+    text-align: center; font-size: 25px; font-weight: 600;
+} 
+hr{
+    border: 1px solid tomato; width:40%;margin-top:2px;
+}
+.about{
+height:auto;
+width:60%;
+padding-right: 1%;
+margin: auto;
+padding-left: 1%;
+
+
+}
+.about > h1 + p{
+    text-align: left; font-size:11px;
+}
+.parent{
+height: auto ;
+width:60%;
+}
+.child{
+padding-bottom: 1%;
+padding-left: 1%;
+margin-bottom:1%;
+
+}
+.child> p{ 
+    font-size: 8px;
+font-weight: 600;
+padding-left: 1%;
+}
+#ending{ 
+    background-color: rgb(218, 229, 240);
+    text-align: center;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    font-weight: 500;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    height:auto;
+    width: 60%;
+    margin: auto;
+      
+    padding-top: 11px;
+    padding-bottom: 6px;
+}
+.parent > .child > h1{ font-size: 13px;}
+
+.matches{
+    height:auto;
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-bottom: 1%;
+}
+.matches > div {
+    height:auto;
+    width:20%;
+    padding:1%;
+    
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.matches > div > img{
+    height: 90px;
+    width:100%;
+}
+#goosebumps{
+    text-align: center;
+    font-size: 11px;
+}
+}    
