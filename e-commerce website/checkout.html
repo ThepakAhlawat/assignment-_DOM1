@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav_container">
+            <a href="#" class="nav_logo">LOGO</a>
+            
+            <div class="nav_menu" id="nav_menu">
+              <ul class="nav_list"> 
+                 <li class="nav_item"><a href="index.html" class="nav_link">Home</a></li>
+                 <li class="nav_item"><a href="mens_clothing.html" class="nav_link">Mens Clothing</a></li>
+                 <li class="nav_item"><a href="womens_clothing.html" class="nav_link">Womens Clothing</a></li>
+                 <li class="nav_item"><a href="jewellery.html" class="nav_link">Jewellery</a></li>
+                 
+                 <li class="nav_item"><a href="Cart.html" class="nav_link">Cart</a></li>
+              </ul> 
+    
+             <!-- close button -->
+              <div class="nav_close" id="nav_close">
+                <i class="ri-close-line"></i>
+                
+              </div>
+            </div>
+    
+            <div class="nav_actions">
+                <!-- search button -->
+                <i class="ri-search-line nav_search" id="search-btn"></i>
+    
+                
+    
+                <!-- toggle button -->
+                <div class="nav_toggle" id="nav_toggle">
+                     <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+        </header>
+    
+        <!---------------    SEARCH    ---------------->
+        <div class="search" id="search">
+            <form action="" class="search_form" id="search_form">
+                <i class="ri-search-line search_icon"></i>
+                <input type="search" placeholder="what are you looking for?" class="search_input" id="search_input">
+            </form>
+                 
+                <i class="ri-close-line search_close" id="search-close"></i>
+        </div>
+      
+       
+
+    
+     <div id="root">
+ 
+     </div>
+
+     <div id="checkout-container">
+        <h1 id="checkout_head">Provide following detail to place <span style="color: crimson;">Order</span></h1>
+  
+        <input type="text" id="name" placeholder="Enter your name"><br></br>
+        <input type="text" id="number" placeholder="Enter your number"><br></br>
+        <input type="text" id="address" placeholder="Enter your address"><br></br>
+        <button id="place-order">Place Order</button>
+        <!-- - In checkout.html page name, number and address should have Ids as “name”, “number” and “address” respectively. -->
+        <!-- - Checkout page will have a Place Order button with Id :- "place-order" -->
+        <h4 id ="order-message"></h4>
+      </div>
+</body>
+
+<script src="checkout.js"></script>
+</html>

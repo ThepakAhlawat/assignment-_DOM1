@@ -1,0 +1,62 @@
+//  let addtocart= document.createElement("button")
+//     addtocart.textContent=`Add to Cart`
+
+//     let itemExisting = Cart.find(item => item.id === product.id);
+    
+//     if(itemExisting){
+//          addtocart.textContent="Go to Cart";
+//     }
+//     addtocart.addEventListener('click',()=>{
+        
+        
+//         if(itemExisting){
+//             let previousQuantity=itemExisting.quantity;
+//             itemExisting.quantity+=1;
+//             let index=Cart.findIndex(item => item.quantity===previousQuantity)
+//             Cart.splice(index,1)
+//         }
+//         else{
+//         product.quantity=1;
+        
+//         }
+//         Cart.push(product);
+//         localStorage.setItem("product",JSON.stringify(Cart));
+//         displaydata(productlist)
+//     })
+
+
+
+
+
+
+// increment .....decrement
+
+// document.addEventListener('click', function(event) {
+//     const target = event.target;
+    
+//     // Check if the clicked element is an increment or decrement button
+//     if (target.classList.contains('increment-btn')) {
+//       const quantityController = target.closest('.quantity_controller');
+//       if (quantityController) {
+//         const quantityElement = quantityController.querySelector('.quantity');
+//         let currentQuantity = parseInt(quantityElement.textContent);
+
+//         // Handle increment and decrement based on the button clicked
+//         if (target.classList.contains('increase')) {
+//           currentQuantity++;
+//         } else if (target.classList.contains('decrease') && currentQuantity > 1) {
+//           currentQuantity--;
+//         }
+
+//         // Update the displayed quantity
+//         quantityElement.textContent = currentQuantity;
+
+//         // You can also update the server-side cart data here if needed
+//         // For example, you might want to send an AJAX request to update the quantity in the database.
+//         // You can use the product ID stored in 'data-product-id' attribute for identification.
+
+//         // const productId = quantityController.dataset.productId;
+//         // updateCartOnServer(productId, currentQuantity);
+//       }
+//     }
+//   });
