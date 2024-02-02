@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Rendering</title>
+    <style>
+ * {
+    box-sizing: border-box;
+    }
+    div {
+   
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+   }
+  form {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 30%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-left: 5px;
+    padding-right: 6px;
+  }
+  label{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    column-gap: 10px;
+    align-items: center;
+    padding: 6px 3px;
+    border-radius: 7px;
+    border: 2px solid #2b619e;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  input[type="text"]{
+    border: 2px solid #2b619e;
+    padding: 7px 6px;
+   
+    border-radius: 7px;
+    cursor: pointer;
+    width: 85%;
+    font-size: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: rgb(107, 125, 243);
+  }
+   
+    button[type="submit"]{
+      width: 85%;
+    background-color: #2b619e;
+    color: white;
+    padding: 7px 6px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+   
+    font-size: 15px;
+    }
+  
+  
+  
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 67%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  table td,
+  table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #8caacf;
+  }
+  table tr td button {
+   border: none;
+   background-color:crimson;
+   font-weight: 700;
+   color: white;
+
+  }
+  
+  table tr:hover {
+    background-color: #ddd;
+  }
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0468aa;
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: #2b619e;
+    text-decoration: underline;
+  }
+  .alert{
+   position: absolute;
+   top:100px;
+   left:400px;
+    height: 500px;
+    width: 650px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+  }
+  .alert>h1{
+    
+    text-decoration: none;
+    color: crimson;}
+  .alert>h3{
+    border: 3px solid green;
+    border-radius: 10px;
+    width:50%;
+    padding: 5px 10px;
+    text-align: center;
+    margin:auto;
+  }
+  .alert>button{
+    border: 5px solid aquamarine;
+    border-radius: 10px;
+    width:20%;
+    padding: 5px 7px;
+    background-color: rgb(2, 24, 62);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin:auto;
+  }
+
+  @media screen and (max-width:1024px){
+    .alert{
+   position: absolute;
+   top:100px;
+   left:125px;
+    height: 460px;
+    width: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+  }
+  }
+
+  @media screen and (max-width:450px){
+    div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+   }
+    form {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 65%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px;
+  }
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+   
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+  label{
+    display: flex;
+    flex-direction: row;
+   
+    column-gap: 30px;
+    align-items: center;
+    padding: 6px 4px;
+   border-radius: 4px;
+    border: 2px solid #2b619e;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .alert{
+   position: absolute;
+   top:100px;
+   left:10px;
+    height: 400px;
+    width: 392px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+  }
+  .alert>h3{
+    border: 3px solid green;
+    border-radius: 10px;
+    width:70%;
+    padding: 5px 2px;
+    text-align: center;
+    margin:auto;
+  }
+  .alert>button{
+    border: 5px solid aquamarine;
+    border-radius: 10px;
+    width:30%;
+    padding: 5px 2px;
+    background-color: rgb(2, 24, 62);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin:auto;
+  }
+  }
+  
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script  type="text/babel">
+    // Code goes here
+    
+   
+    
+
+   function Input(props){
+    const [State,updatedState]=React.useState({Task:"",Completed:false,assigned_To:""});
+    const [tasks,settasks]=React.useState([])
+    const[edit,setEdit]=React.useState(0)
+    const [alert,setAlert]=React.useState(false)
+     
+    function handleChange(e){
+       const value= e.target.type==="checkbox"?e.target.checked:e.target.value
+        let newState={...State,[e.target.name]:value};
+        updatedState(newState);
+
+        
+    }
+   
+
+    function handleSubmit(event){
+     event.preventDefault();
+     console.log(State)
+     setAlert(false)
+     if(State.Task&&State.assigned_To){
+     const newTask={...State,id:Date.now()+Math.random()};
+     const updatedTask=[...tasks,newTask];
+     settasks(updatedTask)
+     
+     updatedState(
+        {Task:"",Completed:false,assigned_To:""}
+     )
+     
+     }
+     else{
+      setAlert(true)
+      
+     }
+    }
+    function handleAlert(){
+        setAlert(false)
+    }
+       
+    function handleEdit(id){
+       const newtodolist=tasks.map((task)=>{
+        if(task.id===id)
+          return {...task,Completed:!task.Completed}
+        
+        return task;
+      })
+      console.log(newtodolist)
+      settasks(newtodolist)
+     }
+    
+    
+    return <>
+
+    {alert==true?<div className="alert"> <h1>Alertt!!</h1><h3>Please fill All the Fields</h3>
+                    <button onClick={handleAlert}>Ok! Got it</button>
+     </div>:<div>
+     
+     <form  onSubmit={handleSubmit}>
+       <input  name="Task" type="text" placeholder="Task" onChange={handleChange} value={State.Task} /><br/><br/>
+
+
+       <label htmlFor="Completed">Task Status : 
+         <input name="Completed" id="Completed" type="checkbox" onChange={handleChange} checked={State.Completed}/>
+       </label><br/>
+
+
+       <input  name="assigned_To" type="text" placeholder="Assinged to ?" onChange={handleChange} value={State.assigned_To}/><br/><br/>
+      
+       <button type="submit" >Add a Task</button>
+     </form>
+
+     <table>
+      <thead>
+       <tr>
+           <th>Task</th>
+           <th>Assigned To</th>
+           <th>Status</th>
+           <th>Edit</th>
+           <th>Delete</th>
+       </tr>
+      </thead>
+      {tasks.map((item)=>(
+       
+       <tr key={item.id}>
+           <td>{item.Task}</td>
+           <td>{item.assigned_To}</td>
+           <td >{item.Completed===true?"Done":"Not Done"} </td>
+           <td><input type="checkbox" onChange={()=>{
+             const newtodolist=tasks.map((task)=>{
+              if(task.id===item.id)
+              return {...task,Completed:!task.Completed}
+        
+              return task;
+             })
+             console.log(newtodolist)
+             settasks(newtodolist)}} checked={item.Completed}></input></td>
+           <td ><button onClick={()=>{
+             settasks(tasks.filter(a=>a.id!=item.id))
+             
+           }} >Delete</button></td>
+       </tr>
+      ))}
+      <tbody>
+
+      </tbody>
+     </table> 
+   </div>}
+    
+    
+    </>
+    }
+   
+   
+
+
+   let rootElement=ReactDOM.createRoot(document.getElementById('root'))
+   rootElement.render(<Input/>)
+  </script>
+</html>
+
+
+
+
+
+
+<!-- {tasks.map((item)=>(
+    <div className="items">
+        <p> Task : {item.Task}</p>
+        <p>{item.Completed}</p>
+        <p> Assigned To : {item.assigned_To}</p>
+    </div>
+))} -->

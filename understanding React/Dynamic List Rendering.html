@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Rendering</title>
+    <style>
+        .wishes{
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            height: 500px;
+            width: 350px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            font-weight: 700;
+            color: chocolate;
+            margin-top: 70px;
+        }
+        h4{
+            color: rgb(117, 152, 81);
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script  type="text/babel">
+    // Code goes here
+    
+   function Main(){
+     return <>
+     <div class="wishes">
+     <h4>1st list</h4>
+     <ItemList items={['Pen','Laptop','Bike','Car','Mobile']}/>
+     <h4>2nd list</h4>
+     <ItemList items={["Apple", "Banana", "Cherry", "oranges"]}/>
+     <h4>3rd list</h4>
+     <ItemList items={[]}/>
+    </div>
+     </>
+   }
+    
+
+   function ItemList(props){
+   let length=props.items.length;
+   if(length===0) {
+    return <>
+    <h5>No Items Found</h5>
+    </>}
+    else {
+        return<>
+        <ul>
+        {props.items.map((item)=>{
+        return <li>{item}</li>})}
+        </ul>
+        </>
+    }
+   }
+   
+
+
+   let rootElement=ReactDOM.createRoot(document.getElementById('root'))
+   rootElement.render(<Main/>)
+  </script>
+</html>
+
+
+<!-- { props.items!=null?props.items.map((item)=>{
+    return <li>{item}</li>
+   }):<h5>No Items Found</h5>} -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>understanding React</title>
+    <style>
+        .main{
+            background-color: wheat;
+            font-weight: 600;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Code goes here
+    
+   
+    function MyComponent(){
+        function clickHandle(){
+            alert("Hello")
+        }
+        return <>
+        <p>React is a javascript library</p>
+        <div class="main">
+            <p>Click the below button to alert 'Hello'</p>
+            <button onClick={clickHandle}>Alert Hello</button>
+        </div>
+        </>
+    }
+
+
+
+   function App(){
+    return <MyComponent/>
+
+    // <>
+    // <MyComponent/>
+    // </>
+    
+    
+   }
+
+   const rootElement=ReactDOM.createRoot(document.getElementById('root'))
+   rootElement.render(<App/>)
+  </script>
+</html>
