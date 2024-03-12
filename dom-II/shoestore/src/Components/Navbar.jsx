@@ -120,8 +120,8 @@ const Navbar = () => {
         </Drawer>
 
         {/* //draweer */}
-        <Box width={{ base: "100%", md: "auto" }} border={"2px solid green"} p={2}>
-          <Box display={"flex"} justifyContent="space-between" border={"2px solid red"}>
+        <Box width={{ base: "100%", md: "auto" }}  p={2}>
+          <Box display={"flex"} justifyContent="space-between" >
             <Box display={"flex"} justifyContent="space-between">
               <InputGroup display={{ base: "none", md: "flex" }}>
                 <Input
@@ -151,6 +151,7 @@ const Navbar = () => {
               justifyContent={"center"}
               alignItems="center"
             >
+              <Link to="/login"><Box as={Button}> Login</Box></Link>
               <FavoriteBorderIcon fontSize="large" />
               <Link to="/cart">
                 <HiOutlineShoppingCart fontSize="37px" />
@@ -163,14 +164,14 @@ const Navbar = () => {
 
       <hr />
 
-      <Box className="navbar" display={{ base: "none", md: "flex" }} border={"2px solid blue"}>
-            <div class="dropdown">
+      <Box className="navbar" display={{ base: "none", md: "flex" }} >
+            <div className="dropdown">
               <button class="dropbtn">
                 New & Now
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="dropdown-content">
-                <Box class="header">
+              <div className="dropdown-content">
+                <Box className="header">
                   <Text as="b">Spotlight On</Text>
                   <Text>New Arrivals</Text>
                   <Text>Eco-Conscious Styles</Text>
@@ -223,12 +224,12 @@ const Navbar = () => {
 
             {/* ////////////////////////// */}
 
-            <div class="dropdown">
+            <div className="dropdown">
               <button class="dropbtn">
                 <Link to={"/womens"}>Women</Link>
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <div
                   class="row"
                   style={{
@@ -237,7 +238,7 @@ const Navbar = () => {
                   }}
                 >
                   <div class="column">
-                    <Box class="header">
+                    <Box className="header">
                       <Text as="b">Women's Shoes</Text>
                       <Text>View All</Text>
                       <Text>Sneakers & Athletics</Text>

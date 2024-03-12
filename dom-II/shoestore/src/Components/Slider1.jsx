@@ -10,6 +10,7 @@ const Slider1 = () => {
         dots: true,
         infinite: true,
         speed: 500,
+        autoplay:true,
         slidesToShow: 4,
         slidesToScroll: 2,
         nextArrow: (
@@ -79,12 +80,17 @@ const Slider1 = () => {
           img:'https://www.famousfootwear.com/blob/product-images/20000/47/32/9/47329_pair_medium.jpg'
         },
       ];
-  return (
-    <>
-      
-    <div className="slider-wrapper">
 
-    <Slider {...settings}>
+      
+  return (
+    
+      
+    <div className="slider-wrapper" style={{textAlign:"center"}}>
+
+      <p style={{fontWeight:"600", fontSize:"27px", marginTop:"40px"}}>Easter Must-Haves</p>
+      <p>Dress to impress with photo-ready styles</p>
+
+    <Slider {...settings}   >
 
       {slidesData.map((slide) =>(
 
@@ -100,7 +106,7 @@ const Slider1 = () => {
     </Slider>
 
   </div>
-  </>
+  
   )
 }
 

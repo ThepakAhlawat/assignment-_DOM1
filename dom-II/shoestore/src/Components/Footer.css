@@ -1,0 +1,157 @@
+.footer_page {
+    width: 100%;
+  }
+  .email_footer {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 80%;
+  }
+  .inputButton {
+    display: flex;
+  }
+  .iconImage {
+    cursor: pointer;
+  }
+  .footer_sectin {
+    
+    
+    background-color: #f0f0f0;
+    padding: 50px;
+  }
+  .footer_icon {
+    width:80%;
+    margin:auto;
+    display: flex;
+    justify-content: left;
+    column-gap:300px;
+  }
+  .Contact{
+   
+    font-weight: 800;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons{
+    
+    display: flex;
+    justify-content: left;
+    column-gap: 30px;
+    align-items: center;
+  }
+  .icon-item{
+    cursor:pointer;
+  }
+  .footerSection {
+    
+    margin-top: 30px;
+  }
+  .foot {
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height: auto;
+    width: 80%;
+    margin: auto;
+  }
+  .footer {
+    
+    margin-top: 20px;
+    height: auto;
+    margin-bottom: 20px;
+    
+  }
+  .foot > .footer > div {
+    margin-top: 20px;
+    height: auto;
+  }
+  
+  li {
+    list-style: none;
+    color: gray;
+    font-size: small;
+  }
+  .footerText {
+    margin-top: 20px;
+    color: rgb(82, 74, 74);
+  }
+  
+  /* //////////////// */
+  
+  
+  
+  
+  
+  
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 992px) {
+    .foot {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+  
+    
+  }
+  
+  @media (max-width: 768px) {
+
+    
+
+    .foot {
+       
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+        width: 80%;
+        margin: auto;
+      }
+    
+    .footer_icon {
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .icons{
+        
+        text-align:center;
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        align-items: center;
+        margin-top: 15px;
+      }
+      
+    
+  }
+  
+  @media (max-width: 576px) {
+    .foot {
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+        width: 100%;
+        margin: auto;
+      }
+    
+    .footer_icon {
+        
+        display: none;
+        justify-content: space-around;
+      }
+  }
